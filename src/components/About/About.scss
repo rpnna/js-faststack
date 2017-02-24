@@ -1,0 +1,29 @@
+.about {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFF;
+  color: #2A2F3A
+}
+
+.aboutTitle {
+  font-family: 'Pacifico', cursive;
+  font-size: 4em;
+}
+
+.emoji {
+  font-size: 1.5em;
+}
+
+.aboutLink {
+  position: absolute;
+  bottom: 50px;
+  text-decoration: none;
+  color: #2A3F3A;
+}
+
+.aboutLink:hover {
+  text-decoration: underline;
+}
