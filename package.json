@@ -8,9 +8,9 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint src",
-    "start": "webpack-dev-server",
-    "build:dev": "rimraf dist && webpack --config ./webpack.config.build.js --env=dev --progress --profile --colors",
-    "build:dist": "rimraf dist && webpack --config ./webpack.config.build.js --env=prod --progress --profile --colors",
+    "start": "webpack-dev-server --config webpack.config.local.js",
+    "build:dev": "rimraf dist && webpack --env=dev --progress --profile --colors",
+    "build:dist": "rimraf dist && webpack --env=prod --progress --profile --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
