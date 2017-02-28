@@ -11,7 +11,7 @@
     "start": "webpack-dev-server --config webpack.config.local.js",
     "build:dev": "rimraf dist && webpack --env=dev --progress --profile --colors",
     "build:dist": "rimraf dist && webpack --env=prod --progress --profile --colors",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.3",
