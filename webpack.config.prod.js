@@ -1,6 +1,8 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 // eslint-disable-next-line
 module.exports = function (env) {
@@ -11,7 +13,7 @@ module.exports = function (env) {
     entry: './index.js',
 
     output: {
-      filename: 'bundle.min.js',
+      filename: 'bundle.[chunkhash].min.js',
       path: resolve(__dirname, 'dist'),
       publicPath: '/'
     },
@@ -73,10 +75,17 @@ module.exports = function (env) {
       }),
 
       new ExtractTextPlugin({
-        filename: 'styles.min.css',
+        filename: 'styles.[chunkhash].min.css',
         allChunks: true
-      })
+      }),
 
+      new HtmlWebpackPlugin({
+        title: 'js Fast Stack'
+      }),
+
+      new ManifestPlugin({
+        fileName: 'assets_dist.json'
+      })
     ]
   };
 };
