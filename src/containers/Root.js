@@ -7,7 +7,7 @@ import App from './App';
 
 const Root = ({ store }) => (
   <Provider store={store}>
-    <Router basename='/js-faststack'>
+    <Router>
       <Route component={App} />
     </Router>
   </Provider>
